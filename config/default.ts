@@ -1,7 +1,7 @@
 export default {
-  port: 8080,
+  port: 9000,
   host: "localhost",
-  dbUrl: "mongodb://lmo:asdffdsa@127.0.0.1:27017/local-pos?authSource=admin",
+  dbUrl: "mongodb://detpos:asdffdsa@127.0.0.1:27017/local-pos?authSource=admin",
   saltWorkFactor: 10,
   secretKey: "suuhh",
   page_limit: 50,
@@ -11,7 +11,7 @@ export default {
   mqttUserName: "detpos",
   mqttPassword: "asdffdsa",
   wsServerUrl: "http://detfsmm:9000/api/change-mode",
-  // detailsaleCloudUrl: "https://detfsmm.com/api/detail-sale",
+  detailsaleCloudUrl: "https://detfsmm.com/api/detail-sale",
   //coustomerCloudUrl: "http://detfsmm.com:9000/api/customer",
   // coustomerCloudUrl: "https://detfsmm.com/api/customer/local-create",
   // debtCloudUrl: "https://detfsmm.com/api/debt/local-create",
