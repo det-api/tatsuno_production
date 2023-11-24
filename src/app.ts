@@ -45,11 +45,11 @@ client.on("message", async (topic, message) => {
 
   if (data[2] == "permit") {
     // when permit topic come
-    apController(data[3], message.toString().substring(0, 2) ); // auto permit approv
+    apController(data[3], message.toString().substring(0, 2)); // auto permit approv
   }
 
-  if(data[2] == "req"){
-    approvDropController(message.toString().substring(0, 2))
+  if (data[2] == "req") {
+    approvDropController(message.toString().substring(0, 2));
   }
 
   if (data[2] == "active") {

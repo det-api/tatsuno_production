@@ -521,6 +521,7 @@ export const addDetailSaleByAp = async (depNo: string, nozzleNo: string) => {
 
     return result;
   } catch (e) {
+    console.log('e in service')
     throw new Error(e);
   }
 };

@@ -8,13 +8,17 @@ export const apController = async (depNo: string, nozzleNo: string) => {
     let mode = await get("mode");
     let approved = await get(nozzleNo);
 
+
     if (!mode) {
       let result = await autoPermitGet();
       await set("mode", result?.mode);
+      mode = result?.mode
     }
 
+
     if (mode == "allow" && !approved) {
-      addDetailSaleByAp(depNo, nozzleNo);
+      console.log("apFlow1");
+      await addDetailSaleByAp(depNo, nozzleNo);
       set(nozzleNo, "approved");
     }
   } catch (e) {
@@ -58,7 +62,7 @@ export const apFinalDropController = async (depNo: string, message: string) => {
 
 export const approvDropController = async (message: string) => {
   try {
-    console.log(message)
+    console.log(message);
     let approv = await get(message);
     if (approv) {
       await drop(message);
