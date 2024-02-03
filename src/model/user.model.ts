@@ -12,6 +12,7 @@ export interface UserInput {
   password: string;
   stationId: string;
   stationNo: number;
+  cardId: string;
 }
 
 export interface UserDocument extends UserInput, mongoose.Document {
@@ -27,6 +28,7 @@ const userSchema = new Schema(
     phone: { type: Number, required: true, unique: true },
     stationId: { type: String, required: true },
     stationNo: { type: Number, required: true },
+    cardId: { type: String, required: true, unique: true },
     name: { type: String, required: true },
     password: { type: String, required: true },
     roles: [{ type: Schema.Types.ObjectId, ref: "role" }],
